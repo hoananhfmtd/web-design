@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    a{
+        text-decoration: none;
+    }
+
+    .input{
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-color: grey;
+    }
+
+    #submit{
+        background-color: white;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 300px;
+        border-color: grey;
+    }
+
+    a:active{
+        color: green;
+    }
+
+    .bgr:hover{
+        background-color: rgb(172, 168, 168);
+    }
+
+    .name {
+        width: 0px;;
+    }
+</style>
+
+<body>
+    <table align="center">
+        <caption><h1>Đăng ký</h1>
+        <h3>Tạo địa chỉ email Yahoo</h3></caption>
+        <tr>
+            <td class="name"><input class="input" type="text" name="txtName" placeholder="Tên"></td>
+            <td><input class="input" type="text" name="txtName" placeholder="Họ"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input class="input" type="email" name="txtMail" placeholder="Địa chỉ email"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><a href="#">Tôi muốn sử dụng email của tôi</a></td>
+        </tr>   
+                
+        <tr>
+            <td><input class="input" type="password" name="txtPassword" placeholder="Mật khẩu"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <select name="sltHeadPhone">
+                    <option value="+82">+82</option>
+                    <option value="+83">+83</option>
+                    <option value="+84">+84</option>
+                    <option value="+85">+85</option>
+                </select>
+                <input class="input" type="tel" name="txtPhoneNumber" placeholder="Số điện thoại" pattern="[0]{1}">
+            </td>
+        </tr>
+
+        <tr class="date">
+            <td id="date"><input class="input" type="number" name="NumDate" placeholder="Ngày"></td>
+            <td id="month"><input class="input" type="number" name="NumDate" placeholder="Tháng"></td>
+            <td id="year"><input class="input" type="number" name="NumDate" placeholder="Năm"></td>
+            <td>Date</td>
+
+
+
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                Giới tính <input type="radio" name="rdGender" value="Male" checked><img height="50" width="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Mars_symbol.svg/1200px-Mars_symbol.svg.png">
+                <input type="radio" name="rdGender" value="Female"><img height="50" width="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Venus_symbol.svg/1200px-Venus_symbol.svg.png">
+            </td>
+        </tr>
+
+        
+
+        <tr>
+            <td colspan="2" align="center">
+                Bằng việc nhấp vào "Tiếp tục", bạn đồng ý với
+                <br><a href="#">Điều khoản</a> và <a href="#">Chính sách riêng tư</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input id="submit" type="submit" value="Tiếp tục">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                Bạn đã có tài khoản?<a href="#">Đăng nhập</a>
+            </td>
+        </tr>
+                
+    </table>
+
+
+</body>
+<script>
+    d = new Date()
+    document.getElementById("date").innerHTML = d.getDate() ;
+    document.getElementById("month").innerHTML = d.getMonth() + 1 ;
+    document.getElementById("year").innerHTML = d.getFullYear() ;
+    
+    
+</script>
+</html>
